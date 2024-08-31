@@ -2,7 +2,7 @@
 //no input
 //output separated by a space all on a single line
 //store all on an array
-
+//then print all on a single line
 #include <stdio.h>
 #include <stdbool.h>
 
