@@ -1,0 +1,14 @@
+//two dim array for weather 5 row, 12 col
+//total rainfall for each year, avg yearly raindall and avg ranfill for each month
+//input will be a 2d array with hard coded val for rainfall amounts for the past 5 years (rainfall can be float)
+
+/*	YEAR	RAINFALL
+	45		544
+	42		544
+	43		544
+	45		544
+	45		544
+	
+	the yearly avf is bla bla
+	
+	monthly avg displsyer per month*/
