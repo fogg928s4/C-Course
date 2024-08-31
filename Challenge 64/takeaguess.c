@@ -10,7 +10,7 @@
 //libraries need
 #include <stdlib.h>
 #include <time.h>
-
+#include <stdbool.h>
 
 int main(){
 	//time var
@@ -27,12 +27,14 @@ int main(){
 	int guess = 1;
 	printf("Get ready to guess the number!\n\n");
 	int attempts = 1;
+
+
 	while(attempts <=5 && guess > 0 && guess <= 20) {
 		printf("This is your attempt #%d\n", attempts);
 		printf("Your guess: ");
 		scanf("%d", &guess);
 		if(guess == answ) {
-			printf("Correct! That's the right answer");
+			printf("Correct! That's the right answer\n");
 			break;
 		}
 		else if(guess > answ) {
@@ -45,8 +47,11 @@ int main(){
 			printf("Your guess is actually too low\n\n");
 			attempts++;
 		}
-
+		if(attemps ==5)
+			printf("So Sorry, the right answer was actually %d", answ);
 	}
+
+
 	return 0;
 
 }
