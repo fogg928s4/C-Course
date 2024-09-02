@@ -15,6 +15,7 @@ void menu();
 int findMCD(int a, int b);
 float absVal(float number);
 
+
 int main() { 
 	menu();
     return 0;
@@ -52,7 +53,31 @@ void menu() {
 	}
 }
 
+//takes to args
 int findMCD(int a, int b) {
+	int temp;
+	
+	//this is actually james foden's answer im legit so impressed
+	//loop until b not 0 in which case the temp is 0 thus theyre divisors
+	while(b != 0) {
+		temp = a % b; 
+		a = b; //swaps them
+		b =temp; //if find a common divisor, it means temp is 0
+	}
+	return a;
+	
+}
+
+float absVal(float number) {
+	if(number < 0)
+		return number * -1;
+	else 
+		return number;
+}
+
+
+
+/* int findMCD(int a, int b) {
 	//determine the shorter number
 	int divisor = 2;
 	int mcd = 1;
@@ -82,11 +107,4 @@ int findMCD(int a, int b) {
 			divisor++;
 	}
 	return mcd;
-}
-
-float absVal(float number) {
-	if(number < 0)
-		return number * -1;
-	else 
-		return number;
-}
+} */
