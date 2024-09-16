@@ -48,7 +48,7 @@ void menu() {
 		case 2:
 			printf("Input the number to find the square root of: ");
 			scanf("%f", &num0);
-			printf("The sqrRoot of %.3f is %.3f\n", num0, sqrRoot(num0));
+			printf("The sqrRoot of %.3f is %.3f\n", absVal(num0), sqrRoot(num0));
 			break;
 		default:
 			printf("\nNot a valid option!\n\n");
