@@ -10,11 +10,10 @@
 #include <stdbool.h>
 
 //function headers
-
 void menu();
 int findMCD(int a, int b);
 float absVal(float number);
-
+float sqrRoot(float n);
 
 int main() { 
 	menu();
@@ -46,6 +45,11 @@ void menu() {
 			scanf("%f", &num0);
 			printf("The |%0.2f| is %0.2f\n", num0, absVal(num0));
 			break;
+		case 2:
+			printf("Input the number to find the square root of: ");
+			scanf("%f", &num0);
+			printf("The sqrRoot of %.3f is %.3f\n", num0, sqrRoot(num0));
+			break;
 		default:
 			printf("\nNot a valid option!\n\n");
 			menu();
@@ -56,7 +60,6 @@ void menu() {
 //takes to args
 int findMCD(int a, int b) {
 	int temp;
-	
 	//this is actually james foden's answer im legit so impressed
 	//loop until b not 0 in which case the temp is 0 thus theyre divisors
 	while(b != 0) {
@@ -75,31 +78,31 @@ float absVal(float number) {
 		return number;
 }
 
-
+float sqrRoot(float n) {
+	float test = 0;
+	const float delta  = 0.001f;
+	n = absVal(n);
+		
+	while((test * test - delta) <= (n-delta)) {
+		test+= delta;
+	}
+	return test;
+}
 
 /* int findMCD(int a, int b) {
-	//determine the shorter number
-	int divisor = 2;
-	int mcd = 1;
-	
 	printf("a=%d\tb=%d\n",a,b);
-	
 	//loop to find the mcd
 	while((divisor <= a) || (divisor <= b)) {
-		
 		if ((a % divisor == 0) && (b % divisor == 0)) {
-			printf("a=%d\tb=%d\t| %d\n",a,b,divisor);
 			a /= divisor; b /= divisor; 
 			mcd *= divisor;
 			
 		}
 		else if ((a % divisor != 0) && (b%divisor == 0)) {
-			printf("a=%d\tb=%d\t| %d\n",a,b,divisor);
 			b /= divisor;
 			return mcd;
 		}	
 		else if ((a % divisor == 0) && (b%divisor != 0)) {
-			printf("a=%d\tb=%d\t| %d\n",a,b,divisor);
 			a /= divisor;
 			return mcd;
 		}
