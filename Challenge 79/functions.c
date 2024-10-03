@@ -60,7 +60,7 @@ void menu() {
 //takes to args
 int findMCD(int a, int b) {
 	int temp;
-	//this is actually james foden's answer im legit so impressed
+	//this is actually jaseon fedin's answer im legit so impressed
 	//loop until b not 0 in which case the temp is 0 thus theyre divisors
 	while(b != 0) {
 		temp = a % b; 
