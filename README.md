@@ -1,4 +1,4 @@
-﻿# C-Course with James Foden
+﻿# C-Course with Jason Fedin 
 Challenges provided in the course 'Master the C Language' on Udemy.com
 
 Link to the full course https://www.udemy.com/course/c-programming-for-beginners-
@@ -11,3 +11,5 @@ Link to the full course https://www.udemy.com/course/c-programming-for-beginners
 
 ## Compilation
 The Source code was compiled using **WSL** for the Linux binaries, and **Cygwin64** for the Windows executables
+
+Every c source file contains the challenge's description. Some have some extra functionality for ease of navigation and use.
