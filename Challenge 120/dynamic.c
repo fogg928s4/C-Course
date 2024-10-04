@@ -9,18 +9,25 @@
 
 int main() {
 	int size;
-	char *str;
+	char *str = NULL;
 	puts("Challenge 120: Dynamic memory allocation");
 	printf("Enter the size of your string: ");
 	scanf("%d", &size);
 	
 	//allocate memory
-	str = (char*) malloc(size);
+	str = (char*) malloc(size * sizeof(char));
+
+	//check for failure
+	if(!str)
+		return 0;
+
 	printf("Now write something nice: ");
-	scanf("%s",str);
+	//using gets, has to be used in tandem to scanf
+	scanf(" ");
+	gets(str);
 	
 	//print result
-	printf("The string you entered was %s\n", str);
+	printf("The string you entered was: %s\n", str);
 	printf("The size of your string is %d\n", (int) sizeof(str));
 
 	//free
