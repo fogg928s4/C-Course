@@ -27,7 +27,7 @@ int main() {
 		//-len is the first char
 	}
 
-	
+	//this took me an awkardly longer time that i thought
 	puts("\nPrinted file in reverse order");
 	
 	fclose(fp);
